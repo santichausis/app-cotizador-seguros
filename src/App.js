@@ -1,25 +1,28 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Header from './components/Header'
+import Formulario from './components/Formulario'
+import styled from '@emotion/styled'
+
+const Contenedor = styled.section`
+  max-width: 600px;
+  margin: 0 auto;
+`
+
+const ContenedorForm = styled.section`
+  background-color: white;
+  padding: 3rem;
+`
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Contenedor>
+      <Header
+        titulo={'Cotizador de seguros'}
+      />
+      <ContenedorForm>
+        <Formulario></Formulario>
+      </ContenedorForm>
+    </Contenedor>
   );
 }
 
